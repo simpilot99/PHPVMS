@@ -1,0 +1,63 @@
+<?php
+        $flights = PIREPData::getRecentReportsByCount(10);                                                                      
+        $string = "";
+        foreach($flights as $flight)
+        {       
+                $string = $string.$flight->depicao.'+-+'.$flight->arricao.',+';
+        }                                                                       
+?>
+
+<div class="mapcenter" align="center">
+<div id="routemap" style="width: 960px; height: 520px;"></div>
+</div>
+<script type="text/javascript">
+var options = {
+	zoom: 4,
+	center: new google.maps.LatLng(<?php echo Config::Get('MAP_CENTER_LAT'); ?>, <?php echo Config::Get('MAP_CENTER_LNG'); ?>),
+	mapTypeId: google.maps.MapTypeId.ROADMAP,
+}
+var map = new google.maps.Map(document.getElementById("routemap"), options);
+</script>
+
+<?php
+$count = 10;
+$pireps = PIREPData::getRecentReportsByCount($count);
+?>
+
+<table width="100%" border="0" bordercolor="#FFFFFF">
+   <thead>
+         <tr align="center" valign="middle" bgcolor="#7D95AF">
+           <th>Flight #</th>
+           <th>Departure</th>
+           <th>Arrival</th>
+           <th>Duration</th>
+           <th>Pilot</th>
+           <th>Aircraft</th>
+         </tr>
+        </thead>
+        <tbody>
+        
+ <?php
+
+if(count($pireps) > 0)
+{
+  foreach ($pireps as $pirep)
+  {
+        $pilotinfo = PilotData::getPilotData($pirep->pilotid);
+        $pilotid = PilotData::getPilotCode($pilotinfo->code, $pilotinfo->pilotid); 
+
+        echo "<tr>";
+        echo "<td align=center> $pirep->code $pirep->flightnum </td>";
+        echo "<td align=center> $pirep->depicao </td>";
+        echo "<td align=center> $pirep->arricao </td>";
+        echo "<td align=center> $pirep->flighttime </td>";
+        echo "<td align=center> $pilotid $pilotinfo->firstname $pilotinfo->lastname </td>";
+        echo "<td align=center> $pirep->aircraft </td>";
+        echo "</tr>";
+  }
+}
+else
+{
+        echo "<tr><td>There are no recent flights!</td></tr>";
+}
+?>

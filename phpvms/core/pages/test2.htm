@@ -1,0 +1,77 @@
+
+  
+  <div align="left">
+    <p align="center">
+      <?php
+        $flights = PIREPData::getRecentReportsByCount(5);                                                                      
+        $string = "";
+        foreach($flights as $flight)
+        {       
+                $string = $string.$flight->depicao.'+-+'.$flight->arricao.',+';
+        }                                                                       
+?>
+      
+      <img src="http://www.gcmap.com/map?P=<?php echo $string ?>&MS=bm&MP=RECT&MR=350x350&PM=pemr:star10:white%2b%22%25I%22:white&PC=orange" width="760" height="520" /><br />
+      
+      <?php
+$count = 10;
+$pireps = PIREPData::getRecentReportsByCount($count);
+?>
+</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="aka_table">
+   <thead>
+     <tr>
+       <th width="68" bgcolor="#08223D"><font color="eeeeee">Pilot</span></th></font>
+       <th width="69" bgcolor="#08223D"><font color="eeeeee">Departure</span></th></font>
+       <th width="70" bgcolor="#08223D"><font color="eeeeee">Arrival</span></th></font>
+       <th width="96" bgcolor="#08223D"><font color="eeeeee">Aircraft</span></th></font>
+       <th width="64" bgcolor="#08223D"><font color="eeeeee">Duration</span></th></font>
+     </tr>
+    </thead>
+    <tbody>
+    
+ <?php
+
+if(count($pireps) > 0)
+{
+  foreach ($pireps as $pirep)
+  {
+    $pilotinfo = PilotData::getPilotData($pirep->pilotid);
+    $pilotid = PilotData::getPilotCode($pilotinfo->code, $pilotinfo->pilotid); 
+    if($pirep->accepted == 0) { $status = '<img src="'.SITE_URL.'/lib/skins/'.CURRENT_SKIN.'/images/icons/mini_pending.png"width="51"height="17"border="0"  alt=""/>'; }
+    else if($pirep->accepted == 1) { $status = '<img src="'.SITE_URL.'/lib/skins/'.CURRENT_SKIN.'/images/icons/mini_accepted.png"width="51"height="17"border="0" alt=""/>'; }
+    else { $status = '<img src="'.SITE_URL.'/lib/skins/'.CURRENT_SKIN.'/images/icons/mini_rejected.png"width="51"height="17"border="0"  alt=""/>'; }
+
+    echo "<tr>";
+    echo "<td align=center><a href=".SITE_URL."/index.php/pireps/viewreport/". $pirep->pirepid.">$pilotid</a></td>";
+    echo "<td align=center>$pirep->depicao</td>";
+    echo "<td align=center>$pirep->arricao</td>";
+    echo "<td align=center>$pirep->aircraft</td>";
+    echo "<td align=center>$pirep->flighttime</td>";
+    echo "</tr>";
+  }
+}
+else
+{
+    echo "<tr><td>There are no recent flights!</td></tr>";
+}
+?>
+   </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

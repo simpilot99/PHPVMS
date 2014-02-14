@@ -1,0 +1,18 @@
+# Skyline
+# By Iain Robb
+# February 2013
+# This skin is relased under the Attribution-NonCommercial 3.0 Unported license (by-nc)
+# View the full license at http://creativecommons.org/licenses/by-nc/3.0/
+
+CHANGELOG
+
+10/02/2013 
+==========================================
+- Original release
+
+05/04/2013 
+==========================================
+- Fixed login box position
+- Cleaned up social icon CSS
+- Added header title to homepage
+- Changed the position of the login button

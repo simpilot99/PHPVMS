@@ -1,0 +1,314 @@
+body {color: #171717; 
+background: url(images/default/bkg_texture.png);
+//background: url(images/grey-noise-background.png);
+font-family: "segoe ui", tahoma, arial,helvetica,clean,sans-serif; font-size: 12px; margin: 0; padding: 0; background-color: rgb(250, 248, 248);}
+.content{	
+	margin-top:0px
+}
+
+html,body {
+    height:100%;
+    overflow: auto;
+overflow-x:hidden;
+}
+form{
+overflow:auto;
+}
+.box{
+background-color: rgba(255, 255, 255, 0.66); 
+border:1px solid lightgrey;
+margin-top:4px;
+width:98%;
+padding:1%;
+color:grey;
+}
+.partners{}
+.partners a img{opacity:0.4; -webkit-transition:1s; -o-transition: 1s; -moz-transition: 1s;-ms-transition:1s;}
+.partners a{text-decoration:none;}
+.partners a img:hover{opacity:1.0;}
+.content-right{
+	width:800px;
+	background:#fff;
+	border-radius:0px 0px 25px 25px;
+	margin:auto;	
+}
+.content-right-left-div{
+	padding:10px;
+	float:left;
+	
+}
+.content-right-right-div{
+	float:left;
+	width:350px;
+	
+}
+.content-right-right-div-title h1{
+	float:left;
+	padding :10px;
+	font-size:30px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+.content-right-right-div p{
+	float:left;
+	font-size:14px;
+	font-family:Verdana, Geneva, sans-serif;
+	line-height:22px;
+}
+.content-bottom-left{
+	width:300px;
+	float:left;	
+}
+.content-bottom-left-title h2{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:20px;
+	padding:20px;
+}
+.content-bottom-left-content ul li{
+	padding:20px;
+	color:#000;
+}
+.content-bottom-right-title h3{
+	color:#000;
+	text-align:center;
+	padding:20px;
+	font-size:20px;
+}
+.content-bottom-right{
+	float:left;	
+	width:400px;
+}
+.slide-content{
+	color: #FFFFFF;
+    margin: 60px 10px 10px 5px;
+	}
+.clear{
+	float:none;
+	clear:both;
+}
+
+.triangle-wrapper{
+	position:absolute;
+	left:0;
+	top:0;
+	}
+.triangle{
+	background-image: url(images/triangle.png);		
+	height:221px; /*resize these as needed*/
+	width:220px;
+	cursor:pointer;
+	position:relative;
+}
+
+#triangle_text{
+	top:10px;
+	left:10px;
+	font-size:15px;
+	color:#FFF;
+	float:left;
+	position:absolute;
+	z-index:100;
+}
+
+	
+.hidden{
+    background-color: #1E3E57;
+    height: 0;
+    overflow: hidden;
+	width:220px;
+	position:absolute;
+	z-index:99;
+	top:0;
+	left:0;
+	}
+.close{
+	color: #FF0000;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 101;
+	padding:2px;
+	display:none;
+	cursor:pointer;
+	}
+
+a { text-decoration: none; color: #0040FF; }
+
+#body { width: 970px; margin: 0 auto; padding: 0 0 0 0;font-size: 12px; border-top: none; border-bottom: none; padding-bottom: 10px; }
+
+h1 { color: #FF6633; }
+
+h3 { background: url(images/air_plane_airport_2.png) no-repeat right;  padding-left:10px; height: 10px; font-size: 18px; line-height:25px; padding-left: 10px; padding-bottom: 15px; font-size:12px; margin-top: 5px; margin-bottom:5px; color: #FFF; background-color: #1E3E57; }
+
+hr{ margin-top: 15px; height: 1px; border: none; border-bottom: solid 1px #999; }
+
+#innerwrapper { width: 970px; background: rgba(255, 255, 255, 0.66); border:1px solid lightgrey; margin-top: 2px;}
+
+#topBanner { background: url(images/topbanner.jpg); width: 970px; height: 109px; }
+
+#topLogin { width: 370px; display: inline; float: right; padding-top: 30px; padding-right: 50px; }
+
+.topNav { font-size: 12px; width: 970px; margin: 0 auto; height: 37px; margin-right:240px;}
+
+.topNav ul { margin: 0; padding: 0; list-style: none; margin: 0 auto; }
+
+.topNav ul li { border:4px solid #FFFFFF; width: 40px; height:40px; border-radius:50%; margin-left:40px; float: left;background-color:#1E3E57; font: bold 12px/37px Arial, Helvetica, sans-serif; 
+box-shadow: 0px 1px 5px 1px rgba(153, 153, 153, 0.22);
+-o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+}
+.topNav ul li:hover { background-color:rgb(16, 179, 255); cursor:pointer;}
+.topNav ul li a {width: 40px; height:40px; float: left; text-decoration: none; display: block; color: #666666; font: 14px/37px Arial, Helvetica, sans-serif; }
+
+.topNav ul li a .icon-white{  margin-left:12.5px; margin-top:33.333%;  }
+
+
+#bodytext { width: 950px; padding-left: 10px; padding-top: 5px; padding-right: 10px; padding-bottom: 0px; }
+
+.indent { padding-left: 32px; }
+
+.fsfk_section_title { font-weight: bold; }
+
+#mainbox { width: 700px; float: left; padding-right: 20px; }
+
+#sidebar { float: left; width: 210px; }
+
+#messagebox { border: dashed 1px #FF9900; background-color: #FFFFCC; padding: 5px 5px 5px 5px; color: #000000; font-size: 14px; float: right; }
+
+#error { border: 1px solid #FF0000; background: #FFCCDA; padding: 7px; text-align: center; }
+
+
+#success { border: 1px solid #008020; background: #D8FFCC; padding: 7px; text-align: center; }
+
+dl { position: relative; width: 730px; z-index: 100; clear: both; }
+
+dt { clear: both; float: left; width: 180px; padding: 0px 0 2px 0; text-align: left; font-size: 12px; font-weight: bold; }
+
+dd { float: left; width: 520px; margin: 0 0 8px 0; padding-left: 6px; font-size: 12px; }
+
+dd button { }
+
+dd p { margin-top: 0px; }
+
+dd input { width: 300px; padding: 3px; margin-bottom: 3px; z-index: 500; }
+
+#footer { width: 970px; /*background: url(images/bottombg.jpg) repeat-x 0 0 #ffffff;*/ height: 148px; margin: 0 auto; padding: 10px 0 0 0; clear: both; text-align: right; border-left: none; border-right: none; }
+
+#footer p { padding: 10px; font-size: 10px; }
+
+#oneout {
+    position:fixed;
+    top:64px;left:15px;
+    text-align:center;
+    -webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;-o-transition-duration:0.3s;transition-duration:0.3s;
+    z-index:99999999; }
+ 
+#oneout_inner {
+    position:fixed;
+    width:300px; height:auto;
+    top:40px; left:-340px;
+    padding:10px;
+    background:#FFFFFF; /* change #FFFFFF; to transparent; if you want the background of the slide out tab to be transparent and not white*/
+    -webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;-o-transition-duration:0.3s;transition-duration:0.3s;
+    text-align:left;
+    z-index:99999999; }
+ 
+#oneout:hover {
+    left:250px;
+    z-index:99999999; }
+ 
+#oneout:hover #oneout_inner {
+    left:0px;
+    z-index:99999999; }
+ 
+.onetitle {
+    position:absolute;
+    left:-11px; top:3px;
+    font-family:arial; font-size:16px;    
+    -webkit-transform:rotate(-90deg); -moz-transform:rotate(-90deg); -ms-transform:rotate(-90deg); -o-transform:rotate(-90deg); transform:rotate(-90deg);
+    z-index:99999999; }
+
+/* Tables */
+/* tables */
+table.tablesorter { width: 100%; }
+
+table.tablesorter input { width: 90%; padding: 3px; border: solid 1px #7094FF; background: #FFFFFF; }
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th { background-color: #e6EEEE; font-size: 8pt; padding: 4px; }
+table.tablesorter thead tr .header { cursor: pointer; }
+table.tablesorter tbody td { padding: 6px; vertical-align: top; border-bottom: dashed 1px #333; }
+table.tablesorter tbody tr.odd td { background-color: #F0F0F6; }
+table.tablesorter thead tr .headerSortUp { background-image: url(images/asc.gif) no-repeat; }
+table.tablesorter thead tr .headerSortDown { background-image: url(images/desc.gif) no-repeat; }
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp { background-color: #8dbdd8; }
+
+
+
+/* Skin */
+
+@media projection, screen {
+	/* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+	.ui-tabs-hide { display: none; }
+}
+
+#oneout {
+    position:fixed;
+    top:64px;left:15px;
+    text-align:center;
+    -webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;-o-transition-duration:0.3s;transition-duration:0.3s;
+    z-index:99999999; }
+ 
+#oneout_inner {
+    position:fixed;
+    width:300px; height:auto;
+    top:40px; left:-340px;
+    padding:10px;
+    background:#FFFFFF; /* change #FFFFFF; to transparent; if you want the background of the slide out tab to be transparent and not white*/
+    -webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;-o-transition-duration:0.3s;transition-duration:0.3s;
+    text-align:left;
+    z-index:99999999; }
+ 
+#oneout:hover {
+    left:250px;
+    z-index:99999999; }
+ 
+#oneout:hover #oneout_inner {
+    left:0px;
+    z-index:99999999; }
+ 
+.onetitle {
+    position:absolute;
+    left:-11px; top:3px;
+    font-family:arial; font-size:16px;    
+    -webkit-transform:rotate(-90deg); -moz-transform:rotate(-90deg); -ms-transform:rotate(-90deg); -o-transform:rotate(-90deg); transform:rotate(-90deg);
+    z-index:99999999; }
+
+/* Hide useless elements in print layouts... */
+@media print {
+	.ui-tabs-nav { display: none; }
+}
+
+.ui-tabs-nav, .ui-tabs-panel { font-family: "Trebuchet MS" , Trebuchet, Verdana, Helvetica, Arial, sans-serif; font-size: 12px; }
+.ui-tabs-nav { list-style: none; margin: 0; padding: 0 0 0 4px; }
+.ui-tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */ display: block; clear: both; content: " "; }
+.ui-tabs-nav li { float: left; margin: 0 0 0 1px; min-width: 84px; /* be nice to Opera */ }
+.ui-tabs-nav a, .ui-tabs-nav a span { display: block; padding: 0 10px; background: url(images/tab.png) no-repeat; }
+.ui-tabs-nav a { margin: 1px 0 0; /* position: relative makes opacity fail for disabled tab in IE */ padding-left: 0; color: #27537a; font-weight: bold; line-height: 1.2; text-align: center; text-decoration: none; white-space: nowrap; /* required in IE 6 */ outline: 0; /* prevent dotted border in Firefox */ }
+.ui-tabs-nav .ui-tabs-selected a { position: relative; top: 1px; z-index: 2; margin-top: 0; color: #000; }
+.ui-tabs-nav a span { width: 64px; /* IE 6 treats width as min-width */ min-width: 64px; height: 18px; /* IE 6 treats height as min-height */ min-height: 18px; padding-top: 6px; padding-right: 0; }
+* > .ui-tabs-nav a span { /* hide from IE 6 */ width: auto; height: auto; }
+.ui-tabs-nav .ui-tabs-selected a span { padding-bottom: 1px; }
+.ui-tabs-nav .ui-tabs-selected a, .ui-tabs-nav a:hover, .ui-tabs-nav a:focus, .ui-tabs-nav a:active { background-position: 100% -150px; }
+.ui-tabs-nav a, .ui-tabs-nav .ui-tabs-disabled a:hover, .ui-tabs-nav .ui-tabs-disabled a:focus, .ui-tabs-nav .ui-tabs-disabled a:active { background-position: 100% -100px; }
+.ui-tabs-nav .ui-tabs-selected a span, .ui-tabs-nav a:hover span, .ui-tabs-nav a:focus span, .ui-tabs-nav a:active span { background-position: 0 -50px; }
+.ui-tabs-nav a span, .ui-tabs-nav .ui-tabs-disabled a:hover span, .ui-tabs-nav .ui-tabs-disabled a:focus span, .ui-tabs-nav .ui-tabs-disabled a:active span { background-position: 0 0; }
+.ui-tabs-nav .ui-tabs-selected a:link, .ui-tabs-nav .ui-tabs-selected a:visited, .ui-tabs-nav .ui-tabs-disabled a:link, .ui-tabs-nav .ui-tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */ cursor: text; }
+.ui-tabs-nav a:hover, .ui-tabs-nav a:focus, .ui-tabs-nav a:active, .ui-tabs-nav .ui-tabs-unselect a:hover, .ui-tabs-nav .ui-tabs-unselect a:focus, .ui-tabs-nav .ui-tabs-unselect a:active { /* @ Opera, we need to be explicit again here now... */ cursor: pointer; }
+.ui-tabs-disabled { opacity: .4; filter: alpha(opacity=40); }
+.ui-tabs-panel { padding: 1em 8px;/* declare background color for container to avoid distorted fonts in IE while fading */ }
+.ui-tabs-loading em { padding: 0 0 0 20px; background: url(loading.gif) no-repeat 0 50%; }
+
+/* Additional IE specific bug fixes... */
+* html .ui-tabs-nav { /* auto clear, @ IE 6 & IE 7 Quirks Mode */ display: inline-block; }
+*:first-child + html .ui-tabs-nav { /* @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */ display: inline-block; }
