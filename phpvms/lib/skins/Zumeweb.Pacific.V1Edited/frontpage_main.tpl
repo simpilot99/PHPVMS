@@ -14,6 +14,7 @@ padding: 10px;
 </style>
  
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
 <script>
 $(function(){
 	$('.fadein img:gt(0)').hide();
@@ -30,7 +31,10 @@ $(function(){
 </div>
 <div class="row-fluid">
 	<div class="span9">
-		<h3>Welcome to Hawaiian Airways Virtual Airline
+<?php 
+$timestamp = time();
+?>
+		<h3>Welcome to Hawaiian Airways Virtual Airline. The Current Time Is <?php echo gmdate('G:i', $timestamp); ?>z
 		<div class="box">
 			<p><font size="2" color="red">Users can now add their own routes to the schedule. Find out how <a href="http://www.youtube.com/watch?v=53HEKoWBDRQ">here.</a></font></p>
 			
