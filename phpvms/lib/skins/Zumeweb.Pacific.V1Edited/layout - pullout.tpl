@@ -77,6 +77,16 @@ echo $page_htmlhead;
     font-family:arial; font-size:16px;    
     -webkit-transform:rotate(-90deg); -moz-transform:rotate(-90deg); -ms-transform:rotate(-90deg); -o-transform:rotate(-90deg); transform:rotate(-90deg);
     z-index:99999999; }
+    
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5); /*dim the background*/
+}
 </style>
 <body>
 <?php
@@ -86,13 +96,15 @@ echo $page_htmlreq;
 ?>
 
 
-<div id="oneout"><span class="onetitle">
-<font color="Black">
+<div id="oneout"><div class="overlay"></div><span class="onetitle">
+<font color="Purple">
 Pilots Corner</font>
  
  
 </span><div id="oneout_inner">
+
 <center>
+<font color= #ffffff>
 <?php
                 /*
                 Quick example of how to see if they're logged in or not
@@ -121,7 +133,7 @@ Pilots Corner</font>
                 ?>
                
                 <img align="left" height="50px" width="50px" style="margin-right: 10px;"
-                        src="<?php echo PilotData::getPilotAvatar($pilotid);?>" />
+                        src="c://users/chase/desktop/hvalogo2.png" />
  
                 <strong>Pilot ID: </strong> <?php echo $pilotid ; ?>
                 <strong>Rank: </strong><?php echo Auth::$userinfo->rank;?><br />
@@ -133,6 +145,7 @@ Pilots Corner</font>
                 <?php
                 } /* End the else */
                 ?>
+                </font>
  
  
 <br></center></div></div>
