@@ -43,7 +43,7 @@ foreach($flightsav as $flight)
 	<td><center><?php echo '<a href=" '.SITE_URL.'/index.php/airports/get_airport?icao='.$flight->arricao.'">'.$flight->arricao.'</a>';?></center></td>
 	<td><center><?php echo $flight->flighttime; ?></center></td>
     <td><center><?php echo $flight->distance; ?> NM </center></td>
-    <td><center><a href="<?php echo url('/schedules/details/'.$flight->id);?>">View Flight Schedule</a></td>
+    <td><center><a href="<?php echo url('/schedules/details/'.$flight->id);?>">View Flight Details</a></td>
 <?php
 }
 ?>
