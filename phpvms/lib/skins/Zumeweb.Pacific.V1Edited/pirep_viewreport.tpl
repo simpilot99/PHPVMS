@@ -60,14 +60,19 @@
                           $actflhou = $actfltime[0] * 60;
                           $actflminu = $actflhou + $actflmin + $actminstarmin;
                         
+                        if (!($pirep->submitdate+($pirep->flighttime*60*60)>time())) { // new line
                           if(($flminu - 20) > $actflminu) {
-                          echo '<font color="blue">and Was Early</font>';
+                            echo '<font color="blue">and Was Early</font>';
                           } elseif (($flminu + 15) < $actflminu) {
-                          echo '<font color="red">and Was Delayed</font>';
+                            echo '<font color="red">and Was Delayed</font>';
                           } else {
-                          echo '<font color="green"> and Was On Time</font>'; }
+                            echo '<font color="green"> and Was On Time</font>';
+                          }
+                        } // new line
 						
-                          ;?>
+                          ?>
+	
+	</li>
 	
 	</li>
 </ul>

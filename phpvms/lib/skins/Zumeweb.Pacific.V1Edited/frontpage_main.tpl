@@ -231,7 +231,35 @@ $(function(){
             
               <?php if($pirep->accepted == PIREP_ACCEPTED && !($pirep->submitdate+($pirep->flighttime*60*60)>time())): ?><font color="green">at <?php echo date('H:i', $pirep->submitdate+($pirep->flighttime*60*60));?>z</font><?php endif; ?>
 	
-        
+        <?php
+                          $schedule = SchedulesData::getScheduleByFlight($pirep->code,$pirep->flightnum);
+                          $fltime = explode(".", $schedule->flighttime);
+                          $minstar = substr($fltime[1],0,1);
+                          $minstarmin = substr($fltime[1],1,2);
+                          $flmin = $minstar * 10;
+                          $flhou = $fltime[0] * 60;
+                          $flminu = $flhou + $flmin + $minstarmin;
+                        
+                          $actfltime = explode(".", $pirep->flighttime);
+                          $actminstar = substr($actfltime[1],0,1);
+                          $actminstarmin = substr($actfltime[1],1,2);
+                          $actflmin = $actminstar * 10;
+                          $actflhou = $actfltime[0] * 60;
+                          $actflminu = $actflhou + $actflmin + $actminstarmin;
+                        
+                        if (!($pirep->submitdate+($pirep->flighttime*60*60)>time())) { // new line
+                          if(($flminu - 20) > $actflminu) {
+                            echo '<font color="blue">and Was Early</font>';
+                          } elseif (($flminu + 15) < $actflminu) {
+                            echo '<font color="red">and Was Delayed</font>';
+                          } else {
+                            echo '<font color="green"> and Was On Time</font>';
+                          }
+                        } // new line
+						
+                          ?>
+	
+	</li>
 </td>
         </tr>
         <?php
