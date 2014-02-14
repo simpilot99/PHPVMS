@@ -51,7 +51,9 @@ echo $page_htmlhead;
     top:64px;left:15px;
     text-align:center;
     -webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;-o-transition-duration:0.3s;transition-duration:0.3s;
-    z-index:99999999; }
+    z-index:99999999;
+	
+ }
  
 #oneout_inner {
     position:fixed;
@@ -61,7 +63,8 @@ echo $page_htmlhead;
     background:#FFFFFF; /* change #FFFFFF; to transparent; if you want the background of the slide out tab to be transparent and not white*/
     -webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;-o-transition-duration:0.3s;transition-duration:0.3s;
     text-align:left;
-    z-index:99999999; }
+    z-index:99999999;
+	background-color:#E47922; }
  
 #oneout:hover {
     left:250px;
@@ -77,7 +80,7 @@ echo $page_htmlhead;
     font-family:arial; font-size:16px;    
     -webkit-transform:rotate(-90deg); -moz-transform:rotate(-90deg); -ms-transform:rotate(-90deg); -o-transform:rotate(-90deg); transform:rotate(-90deg);
     z-index:99999999; }
-    
+	
 .overlay{
   position: absolute;
   top: 0;
@@ -87,15 +90,16 @@ echo $page_htmlhead;
   z-index: 10;
   background-color: rgba(0,0,0,0.5); /*dim the background*/
 }
+
+#content-back
+	{
+background-color:#E47922;
+	}
 </style>
 <body>
-<?php
-/* This should be the first thing you place after a <body> tag
-	This is also required by phpVMS */
-echo $page_htmlreq;
-?>
 
 
+<div id="content-back">
 <div id="oneout"><div class="overlay"></div><span class="onetitle">
 <font color="Purple">
 Pilots Corner</font>
@@ -148,7 +152,7 @@ Pilots Corner</font>
                 </font>
  
  
-<br></center></div></div>
+<br></center></div></div></div>
 
 
 
