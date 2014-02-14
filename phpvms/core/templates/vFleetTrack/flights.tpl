@@ -22,12 +22,11 @@ This module is only use for phpVMS (www.phpvms.net) - (A Virtual Airline Admin S
 <table id="tabledlist" class="tablesorter">
 <thead>
 <tr>
-	<th>Flight #</th>
+	<th>Flight Number</th>
 	<th>Departure</th>
 	<th>Arrival</th>
 	<th>Flight Time</th>
 	<th>Flight Date</th>
-    <th>Landing Rate</th>
     <th>View</th>
 </tr>
 </thead>
@@ -37,13 +36,14 @@ foreach($flights as $flight)
 {	
 ?>
 <tr>
-	<td><?php echo $flight->code . $flight->flightnum; ?></td>
-	<td><?php echo $flight->depicao; ?></td>
-	<td><?php echo $flight->arricao; ?></td>
-	<td><?php echo round($flight->flighttime); ?></td>
-	<td><?php echo date(DATE_FORMAT, $flight->submitdate); ?></td>
-    <td><?php echo $flight->landingrate; ?></td>
-    <td><a href="<?php echo url('/pireps/view/'.$flight->pirepid);?>">View</a></td>
+	<td><center><a href="<?php echo SITE_URL?>/index.php/pireps/view/<?php echo '' . $flight->flightnum . ''; ?>"><?php echo $flight->code.$flight->flightnum; ?></a>
+	</center></td>
+	<td><center><?php echo '<a href=" '.SITE_URL.'/index.php/airports/get_airport?icao='.$flight->depicao.'">'.$flight->depicao.'</a>';?>
+	</center></td>
+	<td><center><?php echo '<a href=" '.SITE_URL.'/index.php/airports/get_airport?icao='.$flight->arricao.'">'.$flight->arricao.'</a>';?></center></td>
+	<td><center><?php echo $flight->flighttime; ?></center></td>
+	<td><center><?php echo date(DATE_FORMAT, $flight->submitdate); ?></center></td>
+    <td><center><a href="<?php echo url('/pireps/view/'.$flight->pirepid);?>">View</a></center></td>
 <?php
 }
 ?>

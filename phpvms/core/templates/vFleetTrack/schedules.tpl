@@ -22,7 +22,7 @@ This module is only use for phpVMS (www.phpvms.net) - (A Virtual Airline Admin S
 <table id="tabledlist" class="tablesorter">
 <thead>
 <tr>
-	<th>Flight #</th>
+	<th>Flight Number</th>
 	<th>Departure</th>
 	<th>Arrival</th>
 	<th>Flight Time</th>
@@ -36,12 +36,14 @@ foreach($flightsav as $flight)
 {	
 ?>
 <tr>
-	<td><?php echo $flight->code . $flight->flightnum; ?></td>
-	<td><?php echo $flight->depicao; ?></td>
-	<td><?php echo $flight->arricao; ?></td>
-	<td><?php echo $flight->flighttime; ?></td>
-    <td><?php echo $flight->distance; ?></td>
-    <td><a href="<?php echo url('/schedules/view/'.$flight->id);?>">View Flight Schedule</a></td>
+	<td><center><a href="<?php echo SITE_URL?>/index.php/pireps/view/<?php echo '' . $flight->flightnum . ''; ?>"><?php echo $flight->code.$flight->flightnum; ?>
+</center></td>
+	<td><center><?php echo '<a href=" '.SITE_URL.'/index.php/airports/get_airport?icao='.$flight->depicao.'">'.$flight->depicao.'</a>';?>
+	</center></td>
+	<td><center><?php echo '<a href=" '.SITE_URL.'/index.php/airports/get_airport?icao='.$flight->arricao.'">'.$flight->arricao.'</a>';?></center></td>
+	<td><center><?php echo $flight->flighttime; ?></center></td>
+    <td><center><?php echo $flight->distance; ?> NM </center></td>
+    <td><center><a href="<?php echo url('/schedules/details/'.$flight->id);?>">View Flight Schedule</a></td>
 <?php
 }
 ?>

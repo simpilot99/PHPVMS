@@ -65,12 +65,17 @@ foreach($allaircrafts as $aircraft)
 	
 ?>
 <tr>
-	<td><?php echo $aircraft->icao;?></td>
-	<td><?php echo $aircraft->name;?></td>
-	<td><?php echo $aircraft->fullname;?></td>
-	<td><?php echo $aircraft->registration;?></td>
+	<td><a href="<?php echo SITE_URL?>/index.php/vFleetTracker/view/<?php echo '' . $aircraft->registration . ''; ?>"><?php echo $aircraft->icao; ?></a>
+	</td>
+	<td><a href="<?php echo SITE_URL?>/index.php/vFleetTracker/view/<?php echo '' . $aircraft->registration . ''; ?>"><?php echo $aircraft->name; ?></a>
+	</td>
+	<td><a href="<?php echo SITE_URL?>/index.php/vFleetTracker/view/<?php echo '' . $aircraft->registration . ''; ?>"><?php echo $aircraft->fullname; ?>
+	</td>
+	<td><a href="<?php echo SITE_URL?>/index.php/vFleetTracker/view/<?php echo '' . $aircraft->registration . ''; ?>"><?php echo $aircraft->registration; ?>
+	</td>
 	<td><?php echo $last;?></td>
-    <td><?php echo $lastlocation;?></td>
+    <td><?php echo '<a href=" '.SITE_URL.'/index.php/airports/get_airport?icao='.$lastlocation.'">'.$lastlocation.'</a>';?>
+	</td>
     <td><?php echo vFleetTrackData::countFlights($aircraft->id);?></td>
     <td><?php echo round(vFleetTrackData::countHours($aircraft->id));?></td>
     <td><?php echo round(vFleetTrackData::countMiles($aircraft->id));?></td>
