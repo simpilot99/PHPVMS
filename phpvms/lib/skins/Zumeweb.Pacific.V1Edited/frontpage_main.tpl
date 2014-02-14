@@ -34,7 +34,7 @@ $(function(){
 <?php 
 $timestamp = time();
 ?>
-		<h3>Welcome to Hawaiian Airways Virtual Airline. The Current Time Is <?php echo gmdate('G:i', $timestamp); ?>z
+		<h3>Welcome to Hawaiian Airways Virtual Airline's Flight Logging System. The Current Time Is <?php echo gmdate('G:i', $timestamp); ?>z
 		<div class="box">
 			<p><font size="2" color="red">Users can now add their own routes to the schedule. Find out how <a href="http://www.youtube.com/watch?v=53HEKoWBDRQ">here.</a></font></p>
 			
