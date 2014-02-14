@@ -46,7 +46,7 @@ echo $page_htmlhead;
 
 </head>
 <style>
-#oneout {
+#one-out {
     position:fixed;
     top:64px;left:15px;
     text-align:center;
@@ -55,7 +55,7 @@ echo $page_htmlhead;
 	
  }
  
-#oneout_inner {
+#oneout-inner {
     position:fixed;
     width:300px; height:auto;
     top:40px; left:-340px;
@@ -74,14 +74,14 @@ echo $page_htmlhead;
     left:0px;
     z-index:99999999; }
  
-.onetitle {
+.one-title {
     position:absolute;
     left:-11px; top:3px;
     font-family:arial; font-size:16px;    
     -webkit-transform:rotate(-90deg); -moz-transform:rotate(-90deg); -ms-transform:rotate(-90deg); -o-transform:rotate(-90deg); transform:rotate(-90deg);
     z-index:99999999; }
 	
-.overlay{
+.over-lay{
   position: absolute;
   top: 0;
   left: 0;
@@ -100,12 +100,12 @@ background-color:#E47922;
 
 
 <div id="content-back">
-<div id="oneout"><div class="overlay"></div><span class="onetitle">
+<div id="one-out"><div class="over-lay"></div><span class="one-title">
 <font color="Purple">
 Pilots Corner</font>
  
  
-</span><div id="oneout_inner">
+</span><div id="oneout-inner">
 
 <center>
 <font color= #ffffff>
