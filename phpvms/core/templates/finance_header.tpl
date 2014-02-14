@@ -45,6 +45,4 @@ foreach($months as $monthname=>$timestamp)
 </select>
 <input type="submit" name="submit" value="View Report" />
 </form>
-</div><br/>
-<br/>
-<br/>
+</div><br />
