@@ -45,12 +45,97 @@ echo $page_htmlhead;
 <script type="text/javascript" src="http://ysfhq.com/snowstorm-min.js"></script>
 
 </head>
+<style>
+#oneout {
+    position:fixed;
+    top:64px;left:15px;
+    text-align:center;
+    -webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;-o-transition-duration:0.3s;transition-duration:0.3s;
+    z-index:99999999; }
+ 
+#oneout_inner {
+    position:fixed;
+    width:300px; height:auto;
+    top:40px; left:-340px;
+    padding:10px;
+    background:#FFFFFF; /* change #FFFFFF; to transparent; if you want the background of the slide out tab to be transparent and not white*/
+    -webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;-o-transition-duration:0.3s;transition-duration:0.3s;
+    text-align:left;
+    z-index:99999999; }
+ 
+#oneout:hover {
+    left:250px;
+    z-index:99999999; }
+ 
+#oneout:hover #oneout_inner {
+    left:0px;
+    z-index:99999999; }
+ 
+.onetitle {
+    position:absolute;
+    left:-11px; top:3px;
+    font-family:arial; font-size:16px;    
+    -webkit-transform:rotate(-90deg); -moz-transform:rotate(-90deg); -ms-transform:rotate(-90deg); -o-transform:rotate(-90deg); transform:rotate(-90deg);
+    z-index:99999999; }
+</style>
 <body>
 <?php
 /* This should be the first thing you place after a <body> tag
 	This is also required by phpVMS */
 echo $page_htmlreq;
 ?>
+
+
+<div id="oneout"><span class="onetitle">
+<font color="Black">
+Pilots Corner</font>
+ 
+ 
+</span><div id="oneout_inner">
+<center>
+<?php
+                /*
+                Quick example of how to see if they're logged in or not
+                Only show this login form if they're logged in */
+                if(Auth::LoggedIn() == false)
+                { ?>
+                        <form name="loginform" action="<?php echo url('/login'); ?>" method="post">
+                         Sign-in with your pilot id or email, or <a href="<?php echo url('/registration'); ?>">register</a><br />
+                        <input type="text" name="email" value="Email Address" onClick="this.value=''" />
+                        <input type="password" name="password" value="Password" />
+                        <input type="hidden" name="remember" value="on" />
+                        <input type="hidden" name="redir" value="index.php/profile" />
+                        <input type="hidden" name="action" value="login" />
+</br>
+                        <input type="submit" name="submit" value="Log In" />
+                        </form>
+                        <?php
+                }      
+                /* End the Auth::LoggedIn() if */
+                else /* else - they're logged in, so show some info about the pilot, and a few links */
+                {
+               
+                /*      Auth::$userinfo has the information about the user currently logged in
+                        We will use this next line - this gets their full pilot id, formatted properly */
+                $pilotid = PilotData::GetPilotCode(Auth::$userinfo->code, Auth::$userinfo->pilotid);
+                ?>
+               
+                <img align="left" height="50px" width="50px" style="margin-right: 10px;"
+                        src="<?php echo PilotData::getPilotAvatar($pilotid);?>" />
+ 
+                <strong>Pilot ID: </strong> <?php echo $pilotid ; ?>
+                <strong>Rank: </strong><?php echo Auth::$userinfo->rank;?><br />
+                <strong>Total Flights: </strong><?php echo Auth::$userinfo->totalflights?>, <strong>Total Hours: </strong><?php echo Auth::$userinfo->totalhours;?>
+                <br />
+                <a href="<?php echo url(''); ?>">Home</a> |  
+                <a href="<?php echo url('/profile/');?>">View Pilot Center</a> |
+                <a href="<?php echo url('/logout');?>">Logout</a>
+                <?php
+                } /* End the else */
+                ?>
+ 
+ 
+<br></center></div></div>
 
 
 
